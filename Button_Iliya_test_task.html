@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Button</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+	<div><img class="img1" src="audi-1.jpg"></div>
+	<button class="btn" id="btn1"><img class="img-search" src="search.png">Button</button><br>
+	
+	<script>
+	    
+    	    $('#btn1').click(function(){
+    		    
+			    var src = ($(".img1").attr("src") === "audi-1.jpg")
+                   	    ? "audi-2.jpg" 
+                        : "audi-1.jpg";
+        		$(".img1").attr("src", src);
+
+        		
+        		if ($(".img1").attr("src") === "audi-2.jpg")
+				$(".img1").toggleClass("flipX");
+
+        		if ($(".img1").attr("src") === "audi-1.jpg")
+        		$(".img1").toggleClass("flipInX");
+
+        });	
+
+	</script>
+</body>
+</html>

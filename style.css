@@ -1,0 +1,75 @@
+.btn {
+	height: 38px;
+	width: 120px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #B8B8B8;
+	background: rgb(240, 240, 240);
+	background: -moz-linear-gradient(90deg, rgb(240, 240, 240) 50%, rgb(220, 220, 220) 60%);
+	background: -webkit-linear-gradient(90deg, rgb(240, 240, 240) 50%, rgb(220, 220, 220) 60%);
+	background: linear-gradient(180deg, rgb(240, 240, 240) 50%, rgb(220, 220, 220) 60%);
+	-moz-box-shadow: inset 0px 0px 15px 0px rgba(198, 198, 198, 0.75);
+	-webkit-box-shadow:    inset 0px 0px 15px 0px rgba(198, 198, 198, 0.75);
+	box-shadow:         inset 0px 0px 15px 0px rgba(198, 198, 198, 0.75);
+	font-weight: bold;
+	font-size: 14px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding: 0 10px 5px 0; 
+	color: #44444F;
+	text-shadow: 0px 1px 3px #fff, -1px 1px 3px #fff;
+}
+.btn:hover {
+	-moz-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.5);
+	-webkit-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.5);
+}
+.img-search {
+	height: 20px;
+	width: 20px;
+	position: relative;
+	right: 10px;
+	top: 5px;
+}
+
+@keyframes flipOutX {
+  from {
+    transform: perspective(400px);
+  }
+
+  30% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
+    animation-timing-function: ease;
+  }
+
+  to {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease;
+    opacity: 0;
+  }
+}
+
+.flipX {
+  animation: flipOutX 1s;
+}
+
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  30% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
+.flipInX {
+  animation: flipInX 1s;
+}
