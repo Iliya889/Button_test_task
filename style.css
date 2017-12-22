@@ -9,9 +9,9 @@
 	background: -moz-linear-gradient(90deg, rgb(240, 240, 240) 50%, rgb(220, 220, 220) 60%);
 	background: -webkit-linear-gradient(90deg, rgb(240, 240, 240) 50%, rgb(220, 220, 220) 60%);
 	background: linear-gradient(180deg, rgb(240, 240, 240) 50%, rgb(220, 220, 220) 60%);
-	-moz-box-shadow: inset 0px 0px 15px 0px rgba(198, 198, 198, 0.75);
-	-webkit-box-shadow:    inset 0px 0px 15px 0px rgba(198, 198, 198, 0.75);
-	box-shadow:         inset 0px 0px 15px 0px rgba(198, 198, 198, 0.75);
+	-moz-box-shadow: inset 0px 0px 15px 0px rgba(50, 50, 50, 0.35);
+	-webkit-box-shadow:    inset 0px 0px 15px 0px rgba(50, 50, 50, 0.35);
+	box-shadow:         inset 0px 0px 15px 0px rgba(50, 50, 50, 0.35);
 	font-weight: bold;
 	font-size: 14px;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
