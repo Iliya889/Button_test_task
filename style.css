@@ -31,45 +31,25 @@
 	right: 10px;
 	top: 5px;
 }
-
-@keyframes flipOutX {
-  from {
-    transform: perspective(400px);
-  }
-
-  30% {
-    transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
-    animation-timing-function: ease;
-  }
-
-  to {
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    animation-timing-function: ease;
-    opacity: 0;
-  }
+.wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  -webkit-perspective: 2000px;
+  -webkit-perspective-origin: 50% 50%;
+  transition: all 1s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateY(0deg);
+  margin-bottom: 20px;
 }
-
-.flipX {
-  animation: flipOutX 1s;
+ 
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
 }
-
-@keyframes flipInX {
-  from {
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-
-  30% {
-    transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
-    animation-timing-function: ease-in;
-  }
-
-  to {
-    transform: perspective(400px);
-  }
-}
-
-.flipInX {
-  animation: flipInX 1s;
+ 
+.back {
+  -webkit-transform: rotateX(180deg);
 }

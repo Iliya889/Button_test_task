@@ -8,21 +8,26 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
-	<div>
-		<img class="img1" src="audi-1.jpg">
-	</div>
-	<button class="btn" id="btn1"><img class="img-search" src="search.png">Button</button><br>
-	<script>
-    	    $('#btn1').click(function(){
-			var src = ($(".img1").attr("src") === "audi-1.jpg")
-                   	? "audi-2.jpg" 
-                    : "audi-1.jpg";
-        		$(".img1").attr("src", src);
-        		if ($(".img1").attr("src") === "audi-2.jpg")
-				$(".img1").toggleClass("flipX").removeClass("flipInX");
-        		if ($(".img1").attr("src") === "audi-1.jpg")
-        		$(".img1").toggleClass("flipInX").removeClass("flipX");
-        });	
-	</script>
+ 		<div class="wrapper">
+  			<div class="front">
+ 				<img class="img1" src="audi-1.jpg">
+  			</div>
+  			<div class="back">
+ 				<img class="img1" src="audi-2.jpg">
+  			</div>
+ 		</div>
+		<button class="btn" id="btn1"><img class="img-search" src="search.png">Button</button><br>
+		<script>
+    	$(function() {
+  			$('button').click(function() {
+    			var wrap = $('.wrapper');
+    			if($(wrap).css('-webkit-transform') == 'matrix(1, 0, 0, 1, 0, 0)') {
+      					$(wrap).css({'-webkit-transform':'rotateX(180deg)'});
+    				} else {
+      						$(wrap).css({'-webkit-transform':'rotateX(0deg)'});
+    				}
+  			});
+		});
+		</script>
 </body>
 </html>
